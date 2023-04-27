@@ -161,7 +161,7 @@ router.get('/education', function (req, res) {
     title: 'Resume',
 
     page: {
-      title: 'Resume | Education',
+      title: 'Resume | Educations',
     },
 
     header,
