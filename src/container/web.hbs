@@ -1,0 +1,101 @@
+<div>
+    {{> title data="Webpage" isBig=true}}
+    <hr>
+    {{#with web}}
+    <div>
+        <ol>
+            {{#each languages}}
+            <li>
+                {{> title data="Language"}}
+                <section>
+                    <p>Name: <strong>{{name}}</strong></p>
+                    <p>Version: <b>{{version}}</b></p>
+                    <p>Description: <b>{{description}}</b></p>
+                    <hr>
+                    {{#if elements}}
+                    <section>
+                        {{> title data="Elements:"}}
+                        <ul>
+                            {{#each elements}}
+                            <li>
+                                <p>Name: <b>{{name}}</b></p>
+                                <p>Description: <b>{{description}}</b></p>
+                                <section>
+                                    {{> title data="Attributes:"}}
+                                    <ul>
+                                    {{#each attributes}}
+                                        <li>
+                                            <p>Name: <b>{{name}}</b></p>
+                                            <p>Description: <b>{{description}}</b></p>
+                                            <hr>
+                                        </li>
+                                    {{/each}}
+                                    </ul>
+                                </section>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}}
+                    {{#if properties}}
+                    <section>
+                        {{> title data="Properties:"}}
+                        <ul>
+                            {{#each properties}}
+                            <li>
+                                <p>Name: <b>{{name}}</b></p>
+                                <p>Description: <b>{{description}}</b></p>
+                                {{#if values}}
+                                    <section>
+                                        {{> title data="Values:"}}
+                                        <ul>
+                                            {{#each values}}
+                                            <li>
+                                                <p>Value: <b>{{value}}</b></p>
+                                                <p>Description: <b>{{description}}</b></p>
+                                                <hr>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </section>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}}
+                    {{#if functions}}
+                    <section>
+                        {{> title data="Functions:"}}
+                        <ul>
+                            {{#each functions}}
+                            <li>
+                                <p>Name: <b>{{name}}</b></p>
+                                <p>Description: <b>{{description}}</b></p>
+                                {{#if parameters}}
+                                    <section>
+                                        {{> title data="Parameters:"}}
+                                        <ul>
+                                            {{#each parameters}}
+                                            <li>
+                                                <p>Name: <b>{{name}}</b></p>
+                                                <p>Type: <b>{{type}}</b></p>
+                                                <p>Description: <b>{{description}}</b></p>
+                                                <hr>
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </section>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </section>
+                    {{/if}}
+                </section>
+            </li>
+            {{/each}}
+        </ol>
+    </div>
+    {{/with}}
+</div>
