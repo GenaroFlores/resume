@@ -1,0 +1,137 @@
+<div>
+    <section>
+        {{> title data="Mac webpage" isBig=true}}
+        <hr>
+    </section>
+    <section>
+        {{> title data="General"}}
+        <p>Name: <strong>{{name}}</strong></p>
+        <p>Description: <b>{{description}}</b></p>
+        <p>Price: <b>{{price}} $</b></p>
+        <p>Category: <b>{{category}}</b></p>
+    </section>
+    <section>
+        <div>
+            <hr>
+            {{> title data="Features" isBig=true}}
+            <hr>
+        </div>
+        {{#with features}}
+        <div>
+            {{> title data="Processor"}}
+            {{#with processor}}
+                <p>Brand: <strong>{{brand}}</strong></p>
+                <p>Model: <b>{{model}}</b></p>
+                <p>Speed: <b>{{speed}}</b></p>
+                <p>Cores: <b>{{cores}}</b></p>
+                <p>Cache: <b>{{cache}}</b></p>
+            {{/with}}
+            <hr>
+        </div>
+        <div>
+            {{> title data="Memory"}}
+            {{#with memory}}
+                <p>Type: <b>{{type}}</b></p>
+                <p>Size: <b>{{size}}</b></p>
+                <p>Speed: <b>{{speed}}</b></p>
+            {{/with}}
+            <hr>
+        </div>
+        <div>
+            {{> title data="Storage"}}
+            {{#with storage}}
+                <p>Type: <b>{{type}}</b></p>
+                <p>Size: <b>{{size}}</b></p>
+            {{/with}}
+            <hr>
+        </div>
+        <div>
+            {{> title data="Display"}}
+            {{#with display}}
+                <p>Size: <b>{{size}}</b></p>
+                <p>Resolution: <b>{{resolution}}</b></p>
+                <p>Technology: <b>{{technology}}</b></p>
+                <p>Color space: <b>{{color_space}}</b></p>
+                <p>Brightness: <b>{{brightness}}</b></p>
+                <p>Refresh rate: <b>{{refresh_rate}}</b></p>
+            {{/with}}
+            <hr>
+        </div>
+         <div>
+            {{> title data="Graphics"}}
+            {{#with graphics}}
+                <p>Brand: <b>{{brand}}</b></p>
+                <p>Model: <b>{{model}}</b></p>
+                <p>Memory: <b>{{memory}}</b></p>
+            {{/with}}
+            <hr>
+        </div>
+        <div>
+            {{> title data="Ports"}}
+            <ol>
+                {{#each ports}}
+                    <li>
+                        <p>Type: <b>{{type}}</b></p>
+                        <p>Count: <b>{{count}}</b></p>
+                        {{#if features}}
+                            {{> title data="Ports"}}
+                            <ul>
+                                {{#each features}}
+                                <li>
+                                    {{this}}
+                                </li>
+                                {{/each}}
+                            </ul>                     
+                            <hr>
+                        {{/if}}
+                    </li>
+                {{/each}}
+            </ol>
+            <hr>
+        </div>
+        <div>
+            {{> title data="Battery"}}
+            {{#with battery}}
+                <p>Type: <b>{{type}}</b></p>
+                <p>Capacity: <b>{{capacity}}</b></p>
+                <p>Life: <b>{{life}}</b></p>
+            {{/with}}
+            <hr>
+        </div>
+        <div>
+            <p>Weight: <b>{{weight}}</b></p>
+            <p>Dimensions: </p>
+            <ul>
+                {{#with dimensions}}
+                    <li>
+                        <p>Height: <b>{{height}}</b></p>
+                    </li>
+                    <li>
+                        <p>Width: <b>{{width}}</b></p>
+                    </li>
+                    <li>
+                        <p>Depth: <b>{{depth}}</b></p>
+                    </li>
+                {{/with}}
+            </ul>
+            <hr>
+        </div>
+        <div>
+            <p>Operating system: <strong>macOS</strong></p>
+            <hr>
+        </div>
+        <div>
+            {{> title data="Accessories"}}
+            <ul>
+                {{#each accessories}}
+                <li>
+                    <p>{{name}}</p>
+                    <p>Price: <b>{{price}} $</b></p>
+                </li>
+                {{/each}}
+            </ul>
+            <hr>
+        </div>
+        {{/with}}
+    </section>
+</div>
