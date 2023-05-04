@@ -1,0 +1,38 @@
+<main>
+
+    <div class="card">
+        {{#with navigation}}
+            <ul class="nav p-2">
+                {{#each links}}
+                    <li class="nav-item">
+                        <a class="nav-link active" href={{href}}>{{text}}</a>
+                    </li>
+               {{/each}}
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                </li>
+            </ul>
+        {{/with}}
+    </div>
+
+    <div>
+        {{#with newsBlock}}
+            <h1 class="text-center mt-5">{{title}}</h1>
+            <div class="container">
+                <div class="row">
+                    {{#each cards}}
+                        <div class="card col-3  text-bg-secondary">
+                            <div class="card-header">
+                                {{title}}
+                            </div>
+                            <div class="card-body">
+                                {{description}}
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+        {{/with}}
+    </div>
+
+</main>
