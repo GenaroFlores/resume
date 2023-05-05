@@ -1,6 +1,6 @@
 <main>
 
-    <div class="card">
+    <div class="card m-5">
         {{#with navigation}}
             <ul class="nav p-2">
                 {{#each links}}
@@ -17,13 +17,15 @@
 
     <div>
         {{#with newsBlock}}
-            <h1 class="text-center mt-5">{{title}}</h1>
-            <div class="container">
+            <h1 class="text-center my-5">{{title}}</h1>
+            <div class="container mb-5">
                 <div class="row">
                     {{#each cards}}
-                        <div class="card col-3  text-bg-secondary">
+                        <div class="card col-3 my-2 text-bg-secondary">
                             <div class="card-header">
                                 {{title}}
+                                {{#if isTop}}<span class="badge text-bg-warning">Top</span>{{/if}}
+                                {{#if isNew}}<span class="badge text-bg-primary">Fresh</span>{{/if}}
                             </div>
                             <div class="card-body">
                                 {{description}}
@@ -32,7 +34,85 @@
                     {{/each}}
                 </div>
             </div>
+            <hr>
+        {{/with}}
+    </div>
+    
+    <div>
+
+        {{#with goodsBlock}}
+            <ul class="nav nav-tabs my-5">
+                {{#each tabs}}
+                    <li class="nav-item me-5">
+                        <a {{#if isActive}}class="nav-link active"{{/if}} {{#if isDisabled}}class="nav-link disabled"{{/if}} href="#">
+                            {{text}}
+                        </a>
+                    </li>
+                {{/each}}
+            </ul>
+
+            <div class="container mb-5">
+                <div class="row">
+                    {{#each cards}}
+                        <div class="card col-4 my-2">
+                            <img class="card-img-top" src={{image}} alt="Product photo">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    {{title}}
+                                    {{#if isHot}}
+                                        <span class="badge text-bg-warning">Hot</span>
+                                    {{/if}}
+                                    {{#if isNew}}
+                                        <span class="badge text-bg-primary">New</span>
+                                    {{/if}}
+                                </h5>
+                                <p>{{description}}</p>
+                            </div>
+                        </div>
+                    {{/each}}
+                </div>
+            </div>
+            <hr>
         {{/with}}
     </div>
 
+    <div class="alert alert-dark my-5">
+         {{#with subscribe}}
+            <h2>{{header}}</h2>
+            <p>{{description}}</p>
+            {{#each buttons}}
+                <div class="row">
+                    <button class="btn btn-primary col-2 m-3" href={{link}}>{{text}}</button>
+                </div>
+            {{/each}}
+         {{/with}}
+    </div>
+    <hr>
+
+    <div class="alert alert-success my-5">
+         {{#with service}}
+            <h2 class="text-center">{{title}}</h2>
+            <p class="text-center">{{description}}</p>
+            {{#each buttons}}
+                <div class="row">
+                    <div class="text-center">
+                        <button class="btn btn-primary col-2 m-3" href={{link}}>{{text}}</button>
+                    </div>
+               </div>
+            {{/each}}
+         {{/with}}
+    </div>
+    <hr>
+
+    <div>
+        {{#each footer}}
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href={{link}}>{{text}}</a>
+                </li>
+            </ul>
+        {{/each}}
+    </div>
+
+    
 </main>
