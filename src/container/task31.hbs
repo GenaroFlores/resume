@@ -208,50 +208,37 @@
             <hr>
         </section>
  
-        <section>
+        <div class="row">
             {{#with footer}}
-                <div>
-                    <h5>{{title}}</h5>
+                <h2 class="mb-4">{{title}}</h2>
+                <div class="col-4 list-group">
+                    {{#each navigation}}
+                        <a href="{{href}}" class="list-item" target="_blank">
+                            <button class="btn btn-link">{{text}}</button>
+                        </a>
+                        <br>
+                    {{/each}}
                 </div>
-                <div class="container">
-                    <div class="row">
-                        {{#each navigation}}
-                            <div class="col-4">
-                                <div class="nav flex-column">
-                                    <div class="nav-item pt-3">
-                                        <a class="btn btn-link" href={{href}}>
-                                            {{text}}
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        {{/each}}
-                        {{#each socialMedia}}
-                            <div class="col-4">
-                                <div class="nav flex-column">
-                                    <div class="nav-item pt-3">
-                                        <a class="btn btn-outline-dark" href={{link}}>
-                                            {{name}}
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        {{/each}}
-                        {{#each partners}}
-                            <div class="col-4">
-                                <div class="nav flex-column">
-                                    <div class="nav-item pt-3">
-                                        <a class="btn btn-outline-info" href={{link}}>
-                                            {{name}}
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        {{/each}}
-                    </div>   
-                </div> 
+
+                <div class="col-4 list-group">
+                    {{#each socialMedia}}
+                        <a href="{{link}}" class="list-item" target="_blank">
+                            <button class="btn btn-outline-dark">{{name}}</button>
+                        </a>
+                        <br>
+                    {{/each}}
+                </div>
+
+                <div class="col-4 list-group">
+                    {{#each partners}}
+                        <a href="{{link}}" class="list-item" target="_blank">
+                            <button class="btn btn-outline-info">{{name}}</button>
+                        </a>
+                        <br>
+                    {{/each}}
+                </div>
             {{/with}}
-        </section>
+        </div>
 
     </div>
 </main>
