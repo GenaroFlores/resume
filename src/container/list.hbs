@@ -1,0 +1,26 @@
+<div>
+    <ul class="m-5"> 
+        {{#each list}}
+            <li>
+                {{#if @first}}marley pop{{/if}}
+                <span>{{name}}</span>
+            </li>
+        {{/each}}
+
+        <br>
+        <br>
+
+        {{#each user}}
+            <li>
+                <b>{{@key}}:</b>
+                {{#if value}}
+                    {{value}}
+                {{else}}
+                    {{text}}
+                {{/if}},
+            </li>
+        {{/each}}
+    </ul>
+
+
+</div>

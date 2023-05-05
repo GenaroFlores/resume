@@ -1271,5 +1271,31 @@ router.get('/task22', function (req, res) {
 
 // ================================================================
 
+//           ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/list', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('list', {
+    //                  ↑↑ сюди вводимо JSON дані
+    layout: 'basic',
+    list: [
+      { name: 'First button' },
+      { name: 'Secondary button' },
+      { name: 'Error button' },
+      { name: 'Submit button' },
+    ],
+
+    user: {
+      name: { value: 'Mykola' },
+      role: { text: 'Admin' },
+      isConfirm: { value: true },
+      age: { value: 35 },
+    },
+  })
+})
+
+// ================================================================
+
 // Підключаємо роутер до бек-енду
 module.exports = router
