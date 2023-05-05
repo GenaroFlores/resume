@@ -1272,11 +1272,11 @@ router.get('/task22', function (req, res) {
 // ================================================================
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
-router.get('/list', function (req, res) {
+router.get('/bootstrap-new', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('list', {
+  res.render('bootstrap-new', {
     //                  ↑↑ сюди вводимо JSON дані
     layout: 'basic',
     list: [
