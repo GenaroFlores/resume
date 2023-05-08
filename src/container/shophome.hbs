@@ -44,9 +44,7 @@
             <ul class="nav nav-tabs my-5">
                 {{#each tabs}}
                     <li class="nav-item me-5">
-                        <a {{#if isActive}}class="nav-link active"{{/if}} {{#if isDisabled}}class="nav-link disabled"{{/if}} href="#">
-                            {{text}}
-                        </a>
+                        <a class="nav-link {{#if isActive}} active {{/if}} {{#if isDisabled}} disabled {{/if}}" href="#">{{text}}</a>
                     </li>
                 {{/each}}
             </ul>
