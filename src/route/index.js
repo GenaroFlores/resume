@@ -1137,7 +1137,6 @@ router.get('/bootstrap', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1388,7 +1387,9 @@ router.get('/task31', function (req, res) {
           link: 'https://www.starkindustries.com/',
         },
       ],
-
+    },
+  })
+})
 // =================================================================
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
@@ -1516,14 +1517,12 @@ router.get('/task22', function (req, res) {
           },
         },
       },
-
     },
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
 // ================================================================
-
 
 router.get('/shophome', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1808,9 +1807,8 @@ router.get('/shophome', function (req, res) {
       ],
     ],
   })
-  //                  ↑↑ сюди вводимо JSON дані
-
-
+})
+//                  ↑↑ сюди вводимо JSON дані
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
 router.get('/bootstrap-new', function (req, res) {
