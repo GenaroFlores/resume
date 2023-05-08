@@ -1,0 +1,73 @@
+<div>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb ms-5">
+            {{#each breadcrumb}}
+                <li class="breadcrumb-item" {{#if @last}} class="breadcrumb-item active" aria-current="page" {{/if}}>
+                    <a href="{{url}}">{{name}}</a>
+                </li>
+            {{/each}}
+        </ol>
+    </nav>
+
+    {{#with productData}}
+    <div class="row">
+        <div class="col-6">
+            <div class="card ms-5 mt-4">
+                <img class="card-img-top" src={{img}} alt="Product photo">
+                <div class="card-body">
+                    {{#with info}}
+                        <h5 class="card-title">
+                            {{title}}
+                        </h5>
+                        <p>{{about}}</p>
+                        <h3>{{price}}</h3>
+                        <div>
+                            {{#each category}}
+                                    {{#if isHot}}
+                                        <span class="badge text-bg-warning rounded-pill me-1">{{name}}</span>
+                                    {{/if}}
+                                    {{#if isNew}}
+                                        <span class="badge text-bg-primary rounded-pill me-1">{{name}}</span>
+                                    {{/if}}
+                                    {{#if isBonus}}
+                                        <span class="badge text-bg-info rounded-pill">{{name}}</span>
+                                    {{/if}}
+                            {{/each}}
+                        </div>
+                    {{/with}}
+                </div>
+            </div>
+        </div>
+
+        <div class="col-5">
+             {{#with item}}
+                    <table class="table ms-5">
+                        <thead>
+                            <tr>
+                                {{#each head}}
+                                <th class="text-capitalize">
+                                    {{this}}
+                                </th>
+                                {{/each}}
+                            </tr>
+                        </thead>
+                        {{#each body}}
+                            <tbody>
+                                <tr>
+                                    {{#each this}}
+                                    <td>
+                                        {{this}}
+                                    </td>
+                                    {{/each}}
+                                </tr>
+                            </tbody>
+                        {{/each}}
+                    </table>
+                {{/with}}
+        </div>
+        
+    </div>
+         
+    {{/with}}
+ 
+</div>
