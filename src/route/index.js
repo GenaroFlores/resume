@@ -1900,7 +1900,7 @@ router.get('/shopproduct', function (req, res) {
       },
 
       param: {
-        title: 'Product params',
+        title: 'Product parameters',
         list: ['Экран 15.6', 'IPS (1920x1080)', 'Full HD'],
       },
 
