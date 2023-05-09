@@ -1,0 +1,18 @@
+<main>
+    <div class="ms-5">
+        {{#with header}}
+            <h1>{{title}}</h1>
+            {{#with button}}
+                <button class="btn btn-outline-secondary mt-3" href="{{link}}">
+                    {{text}}
+                </button>
+            {{/with}}
+        {{/with}}
+    </div>
+    <hr class="ms-5 my-5">
+    <div class="ms-5">
+        {{#each goodsBlock}}
+            {{> cartGoodsItem}}
+        {{/each}}
+    </div>
+</main>
