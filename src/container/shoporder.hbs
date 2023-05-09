@@ -1,0 +1,67 @@
+<main>
+    <div class="row">
+
+        <div class="col-8">
+            <h1 class="my-5 ms-5">{{header}}</h1>
+            {{#with contacts_data}}
+                <h2 class="ms-5">{{title}}</h2>
+                <div class="ms-5 mt-4">
+                    {{#each buttons}}
+                        <button class="{{#if isPrimary}} btn btn-warning text-white{{/if}} {{#if isOutline}} btn btn-outline-warning {{/if}} me-3">
+                            {{text}}
+                        </button>
+                    {{/each}}
+                </div>
+            {{/with}}
+            {{#with form}}
+                {{#with input}}
+                    {{#with surname}}
+                        <div class="col-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label class="form-label">{{label}}</label>
+                                    <input class="form-control" placeholder="{{placeholder}}">
+                                    <div class="form-text">{{caption}}</div>
+                                </div>
+                            </form>
+                        </div>
+                    {{/with}}
+                    {{#with name}}
+                        <div class="col-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="{{label}}" class="form-label">{{placeholder}}</label>
+                                    <input class="form-control">
+                                    <div class="form-text">{{caption}}</div>
+                                </div>
+                            </form>
+                        </div>
+                    {{/with}}
+                    {{#with phone}}
+                        <div class="col-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="{{label}}" class="form-label">{{placeholder}}</label>
+                                    <input class="form-control">
+                                    <div class="form-text">{{caption}}</div>
+                                </div>
+                            </form>
+                        </div>
+                    {{/with}}
+                    {{#with email}}
+                        <div class="col-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="{{label}}" class="form-label">{{placeholder}}</label>
+                                    <input class="form-control">
+                                    <div class="form-text">{{caption}}</div>
+                                </div>
+                            </form>
+                        </div>
+                    {{/with}}
+                {{/with}}
+            {{/with}}
+        </div>
+
+    </div>
+</main>
