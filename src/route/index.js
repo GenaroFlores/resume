@@ -2445,7 +2445,7 @@ router.get('/shoporder', function (req, res) {
           caption: 'Введіть Пошту',
         },
       },
-      coment: {
+      comment: {
         label: 'Коментар',
         placeholder: 'Я хочу, щоб',
       },
