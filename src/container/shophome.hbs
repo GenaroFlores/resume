@@ -17,22 +17,7 @@
     <div>
         {{#with newsBlock}}
             <h1 class="text-center my-5">{{title}}</h1>
-            <div class="container mb-5">
-                <div class="row">
-                    {{#each cards}}
-                        <div class="card col-3 my-2 text-bg-secondary">
-                            <div class="card-header">
-                                {{title}}
-                                {{#if isTop}}<span class="badge text-bg-warning">Top</span>{{/if}}
-                                {{#if isNew}}<span class="badge text-bg-primary">Fresh</span>{{/if}}
-                            </div>
-                            <div class="card-body">
-                                {{description}}
-                            </div>
-                        </div>
-                    {{/each}}
-                </div>
-            </div>
+            {{> shoppost}}
             <hr>
         {{/with}}
     </div>
