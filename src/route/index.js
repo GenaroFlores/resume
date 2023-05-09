@@ -2730,7 +2730,7 @@ router.get('/shopcart', function (req, res) {
     },
 
     goodsOtherBlock: {
-      title: 'See other products',
+      title: 'See our other products',
       cards: [
         {
           image: 'https://picsum.photos/400/200',
@@ -2738,7 +2738,7 @@ router.get('/shopcart', function (req, res) {
           description:
             'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
           isHot: false,
-          idNew: false,
+          isNew: false,
         },
         {
           image: 'https://picsum.photos/400/200',
@@ -2746,7 +2746,7 @@ router.get('/shopcart', function (req, res) {
           description:
             "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
           isHot: true,
-          idNew: false,
+          isNew: false,
         },
         {
           image: 'https://picsum.photos/400/200',
@@ -2754,7 +2754,7 @@ router.get('/shopcart', function (req, res) {
           description:
             "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
           isHot: false,
-          idNew: false,
+          isNew: false,
         },
       ],
     },
