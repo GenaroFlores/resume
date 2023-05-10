@@ -1,0 +1,14 @@
+<div class="card m-5">
+    {{#with navigation}}
+        <ul class="nav p-2">
+            {{#each links}}
+                <li class="nav-item">
+                    <a class="nav-link active" href={{href}}>{{text}}</a>
+                </li>
+            {{/each}}
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+        </ul>
+    {{/with}}
+</div>
