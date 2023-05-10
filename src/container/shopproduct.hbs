@@ -88,13 +88,13 @@
             </div>
            
             <div class="card ms-5 mt-3 mb-5">
-                {{#each actionList}}
-                    <div class="col-3">
-                        <button class="{{#if isWarning}} btn btn-warning {{/if}} {{#if isError}} btn btn-outline-danger {{/if}} {{#if isSuccess}} btn btn-success {{/if}} {{#if isGood}} btn btn-outline-success {{/if}}">
+                <div class="card-body">
+                    {{#each actionList}}
+                        <button class="{{#if isWarning}} btn btn-warning {{/if}} {{#if isError}} btn btn-outline-danger {{/if}} {{#if isSuccess}} btn btn-success {{/if}} {{#if isGood}} btn btn-outline-success {{/if}} me-2">
                             {{name}}
                         </button>
-                    </div>
-                {{/each}}
+                    {{/each}}
+                </div>
             </div>
             
         </div>
