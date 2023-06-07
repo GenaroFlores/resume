@@ -13,7 +13,7 @@
 
         <h1 class="my-3">{{header}}</h1>
         {{#each sortBlock}}
-            <div class="col-3">
+            <div class="col-3 my-5">
                 <select class="form-select">
                     <option selected>{{placeholder}}</option>
                     {{#each options}}
@@ -92,42 +92,14 @@
 
         <div class="col-8">
             {{#each goodsList}}
-                <div class="card mt-4">
-                    <img class="card-img-top" src={{img}} alt="Product photo">
-                    <div class="card-body">
-                    
-                        <h5 class="card-title">
-                            {{title}}
-                        </h5>
-                        <p>{{about}}</p>
-                        <h3>{{price}}</h3>
-                        
-                            
-                        {{#if isHot}}
-                            <span class="badge text-bg-warning rounded-pill me-1">{{name}}</span>
-                        {{/if}}
-                        {{#if isNew}}
-                            <span class="badge text-bg-primary rounded-pill me-1">{{name}}</span>
-                        {{/if}}
-                        {{#if isBonus}}
-                            <span class="badge text-bg-info rounded-pill">{{name}}</span>
-                        {{/if}}
-                            
-                        
-                    
-                </div>
-            {{/each}}
-                
-        </div>
             
+                    {{> catalogitem}}
+               
+            {{/each}}    
+        </div>
+        
     </div>
 
-
-    
-
-    
-    <div>
-        {{> shop-action}}
-    </div>
+    {{> shop-action}}
 
 </main>
