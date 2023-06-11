@@ -3827,5 +3827,16 @@ router.get('/shopcatalog', function (req, res) {
 
 // ================================================================
 
+// ↙ тут вводимо шлях (PATH) до сторінки
+router.get('/index8', function (req, res) {
+  //             ↙ cюди вводимо назву файлу з сontainer
+  res.render('index8', {
+    // ↙ сюди вводимо JSON дані
+    layout: 'index8',
+    firstname: 'Rodion',
+    lastname: 'Davydenko',
+    project_name: 'Resume project',
+  })
+})
 // Підключаємо роутер до бек-енду
 module.exports = router
