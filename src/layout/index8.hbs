@@ -16,7 +16,11 @@
   <body> 
     <div class="card m-5 card">
         <div class="card-body">
-            <p><strong>{{firstname}} {{lastname}}</strong> <b class="text-align-end">{{project_name}}</b></p>
+            <div class="row">
+              <div class="col-6"><h4><strong>{{firstname}} {{lastname}}</strong></h4></div>
+              <div class="col-6"><h4 class="text-end"><b>{{project_name}}</b></h4></div>
+            </div>
+             
         </div>
     </div>
     {{!  ↓  ця кострукція показує куди шаблонізатору треба вставляти код з container файлу   --}}

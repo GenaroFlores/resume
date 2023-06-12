@@ -1,1 +1,14 @@
-Wosh
+<main>
+    <div class="m-5">
+        <div class="mb-5 ms-5">
+            <p class="display-6">{{text}}</p>
+        </div>
+        <ul>
+            {{#each page_list}}
+                <div class="my-3">
+                    <a class="btn btn-primary" href="{{link}}">{{name}}</a>
+                </div>
+            {{/each}}
+        </ul>
+    </div>
+</main>
